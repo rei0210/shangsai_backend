@@ -42,6 +42,9 @@ class Question:
         self.text = text
         self.choices = choices or []  # 选项列表
 
+
+
+
     def add_choice(self, choice):
         """ 添加选项 """
         self.choices.append(choice)

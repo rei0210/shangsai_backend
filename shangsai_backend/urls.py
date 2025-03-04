@@ -18,9 +18,13 @@ from django.http import HttpResponse
 # from django.contrib import admin
 from django.urls import path
 
+from Course.views import get_all_courses_view
+
+
 def index(request):
     return HttpResponse('Hello world1111')
 urlpatterns = [
     #    path("admin/", admin.site.urls),
-    path('', index)
+    path('', index),
+    path('api/course/get_all_courses',get_all_courses_view),
 ]

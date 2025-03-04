@@ -19,3 +19,5 @@ class CourseManager(models.Manager):
 
     def delete_course(self, course_id):
         return self.delete(course_id=course_id)
+
+

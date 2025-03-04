@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 from django.db import models
 
-
+from Course.manager import CourseManager
 
 
 class Course(models.Model):
@@ -12,6 +12,8 @@ class Course(models.Model):
     course_name = models.CharField(max_length=255)  # 课程名称
     course_simplified_name = models.CharField(max_length=100, blank=True, null=True)  # 简称
     #teacher = models.ForeignKey(User, on_delete=models.CASCADE)  # 关联教师（Django User）
+
+    manager=CourseManager()
 
     class Meta:
         db_table = 'course'  # 自定义表名
